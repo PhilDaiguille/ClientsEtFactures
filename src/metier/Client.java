@@ -48,7 +48,6 @@ public class Client
 	{
 		if (montant < 0)
 		{
-			System.out.print("Le montant d'une facture ne peut pas être négatif.");
 			return null;
 		} else {
 			Facture facture = new Facture(this, montant, false, LocalDate.now());
@@ -109,7 +108,7 @@ public class Client
 	public List<Facture> facturesReglees()
 	{
 		List<Facture> Facture = new ArrayList<Facture>();
-		for (int i = 0; i<factures.size(); i++) {
+		for (int i = 0; i<=factures.size(); i++) {
 			if (factures.get(i).estReglee()) {
 				Facture.add(factures.get(i));
 			}
