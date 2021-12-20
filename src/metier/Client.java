@@ -91,11 +91,11 @@ public class Client
 		if (montant <= 0)
 		{
 			try{
-				throw new Exception("Le montant d'une facture ne peut pas être négatif.");
+				throw new IllegalArgumentException();
 			}
-			catch (Exception regle)
+			catch(AlreadyBoundException e)
 			{
-				System.out.println(regle.getMessage());
+			  	System.out.println("An exception has been raised.");
 			}
 		}
 		else 
