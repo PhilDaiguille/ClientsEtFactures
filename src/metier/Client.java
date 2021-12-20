@@ -90,13 +90,7 @@ public class Client
 	{
 		if (montant <= 0)
 		{
-			try{
-				throw new IllegalArgumentException();
-			}
-			catch(AlreadyBoundException e)
-			{
-			  	System.out.println("An exception has been raised.");
-			}
+			throw new IllegalArgumentException();
 		}
 		else 
 		{
