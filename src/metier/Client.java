@@ -88,17 +88,17 @@ public class Client
 	 */
 	public Facture createFacture(int montant, boolean estreglee)
 	{
-		if (montant <= 0)
+		if (montant <= 0) 
 		{
-			throw new IllegalArgumentException();
-		}
+			System.out.println("Le montant d'une facture ne peut pas être négatif.");
+			return null;
+		} 
 		else 
 		{
 			Facture facture = new Facture(this, montant, estreglee, LocalDate.now());
 			factures.add(facture);
 			return facture;
 		}
-		return null;
 	}
 	/**
 	 * Retourne la liste des factures reglées.
