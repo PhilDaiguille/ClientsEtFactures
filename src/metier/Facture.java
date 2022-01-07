@@ -16,9 +16,17 @@ public class Facture
 
 	public Facture(Client nom, int montant, boolean estreglee, LocalDate date)
 	{
+		if (montant < 0) 
+		{
+            System.out.println("Le montant d'une facture ne peut pas être négatif.");
+        } 
+		else 
+        {
+        	this.nom = nom;
+        }
 		this.date = date;
 		this.montant = montant;
-		this.nom = nom;
+		
 		this.estreglee = estreglee;
 
 	}
