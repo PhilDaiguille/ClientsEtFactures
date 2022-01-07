@@ -131,4 +131,8 @@ public class Client
 	{
 		Client.remove(this);
 	}
+
+	public void deleteFacture(Facture facture) {
+		factures.remove(facture);
+	}
 }
