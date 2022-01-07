@@ -64,7 +64,7 @@ public class Facture
 
 	public void delete()
 	{
-		this.estreglee = true;
+		getClient().getFactures().remove(this);
 	}
 
 	/**
@@ -74,7 +74,6 @@ public class Facture
 
 	public Facture copie()
 	{
-		Facture facture = new Facture(this.nom, this.montant, estreglee, this.date);
-		return facture;
+		return getClient().createFacture(getMontant(), estReglee());
 	}
 }
